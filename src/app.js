@@ -18,8 +18,6 @@ app.get('/', (req, res) => {
     res.send('Hello, world!')
 })
 
-app.use('/api/todos', todosRouter);
-
 app.use(function errorHandler(error, req, res, next) {
   let response
   if (NODE_ENV === 'production') {
